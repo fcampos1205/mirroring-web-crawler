@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/fcampos1205/mirroring-web-crawler/config"
 	"github.com/fcampos1205/mirroring-web-crawler/crawler"
 	"go.uber.org/zap"
@@ -10,11 +8,8 @@ import (
 
 func main() {
 	// Load configuration settings
-
 	cfg, err := config.Load()
 	if err != nil {
-
-		fmt.Println("error")
 		zap.L().Fatal("failed to start config", zap.Error(err))
 	}
 
